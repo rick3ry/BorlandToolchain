@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolchaindefinition xmlns="https://netbeans.org/ns/cnd-toolchain-definition/1">
+    <linker>
+        <library_prefix stringvalue=""/>
+        <library_search flags="-LIB "/>
+        <dynamic_library_search flags="-LIB "/>
+        <library_flag flags="-LIB "/>
+        <PIC flags=""/>
+        <static_library flags=""/>
+        <dynamic_library flags=""/>
+        <dynamic_library_basic flags=""/>
+        <output_file flags="-EXE "/>
+        <strip_flag flags=""/>
+    </linker>
+</toolchaindefinition>

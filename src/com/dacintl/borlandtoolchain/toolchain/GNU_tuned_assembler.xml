@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolchaindefinition xmlns="https://netbeans.org/ns/cnd-toolchain-definition/1">
+    <assembler>
+        <compiler name="386asmshim"/>
+        <version flags="-version"/>
+        <development_mode>
+            <fast_build flags="-TWOCASE"/>
+            <debug default="true" flags="-TWOCASE -CVSYM -LNUM"/>
+            <performance_debug flags="-TWOCASE -CVSYM -LNUM"/>
+            <test_coverage flags="-TWOCASE"/>
+            <diagnosable_release flags="-TWOCASE"/>
+            <release flags="-TWOCASE"/>
+            <performance_release flags="-TWOCASE"/>
+        </development_mode>
+        <warning_level>
+            <no_warnings flags=""/>
+            <default default="true" flags="-FULLWARN"/>
+            <more_warnings flags="-FULLWARN"/>
+            <warning2error flags=""/>
+        </warning_level>
+        <architecture>
+            <default default="true" flags=""/>
+        </architecture>
+        <strip flags=""/>
+        <output_object_file flags="-OBJECT "/>
+    </assembler>
+</toolchaindefinition>

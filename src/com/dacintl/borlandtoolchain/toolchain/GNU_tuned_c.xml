@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolchaindefinition xmlns="https://netbeans.org/ns/cnd-toolchain-definition/1">
+    <c>
+        <compiler name="bcc32shim"/>
+        <recognizer pattern=".*bcc32shim.*"/>
+        <important_flags flags="-O(\W|$|-)|-O1|-O2|-O3|-O4|-O5|-Ox|-Og|-Os|-ff(\W|$|-)|-std=.*|-xc($|\+\+$)"/>
+        <development_mode>
+            <fast_build flags=""/>
+            <debug flags="-v -y -Od"/>
+            <performance_debug flags="-v -y -Od"/>
+            <test_coverage flags="-v -y"/>
+            <diagnosable_release flags=""/>
+            <release flags="-O2 -5" default="true"/>
+            <performance_release flags="-O2 -5"/>
+        </development_mode>
+        <warning_level>
+            <no_warnings flags="-w-"/>
+            <default default="true" flags=""/>
+            <more_warnings flags="-w"/>
+            <warning2error flags="-w!"/>
+        </warning_level>
+        <architecture>
+            <default default="true" flags=""/>
+        </architecture>
+        <cpp_standard>
+            <default default="true" flags=""/>
+        </cpp_standard>
+        <system_macros flags="" parser="">
+            <macro stringvalue="__DAC__=1"/>
+        </system_macros>
+        <system_include_paths flags="" parser="" remove_in_output="" remove_in_path="">
+            <include stringvalue="C:\\BC45\\INCLUDE"/>
+        </system_include_paths>    
+        <output_object_file flags="-o"/>
+        <dependency_generation flags=""/>
+        <precompiled_header append="false" flags="" suffix=".gch"/>
+    </c>
+</toolchaindefinition>
+

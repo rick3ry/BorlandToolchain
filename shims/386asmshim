@@ -1,0 +1,5 @@
+#! /bin/sh
+# Things called as part of mingw apparently expect unix-ish scripting commands?
+# Launch CMD instead - per SO: a '/c' will be xlated to something so it needs to be escaped as '//c'
+CMD //C 386asmshim.cmd ${*//\//\\}
+

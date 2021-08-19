@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="CND">
+        <folder name="Tool">
+            <file name="Borland_Pharlap" url="toolchain/Borland_Pharlap.xml">
+                <attr name="extends" stringvalue="GNU_flavor"/>
+            </file>
+            <file name="GNU_tuned_cpp" url="toolchain/GNU_tuned_cpp.xml">
+                <attr name="extends" stringvalue="GNU_cpp"/>
+            </file>
+            <file name="GNU_tuned_c" url="toolchain/GNU_tuned_c.xml">
+                <attr name="extends" stringvalue="GNU_c"/>
+            </file>
+            <file name="GNU_tuned_assembler" url="toolchain/GNU_tuned_assembler.xml">
+                <attr name="extends" stringvalue="GNU_assembler"/>
+            </file>
+            <file name="GNU_tuned_linker" url="toolchain/GNU_tuned_linker.xml">
+                <attr name="extends" stringvalue="GNU_linker"/>
+            </file>
+        </folder>
+        <folder name="ToolChains">
+            <folder name="GNU_tuned">
+                <attr name="position" intvalue="5000"/>
+                <attr name="SystemFileSystem.localizingBundle" stringvalue="com.dacintl.borlandtoolchain.Bundle"/>
+                <file name="flavor.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/Borland_Pharlap"/>
+                </file>
+                <file name="c.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_tuned_c"/>
+                </file>
+                <file name="cpp.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_tuned_cpp"/>
+                </file>
+                <file name="fortran.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_fortran"/>
+                </file>
+                <file name="assembler.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_tuned_assembler"/>
+                </file>
+                <file name="scanner.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_scanner"/>
+                </file>
+                <file name="linker.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_tuned_linker"/>
+                </file>
+                <file name="make.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_make"/>
+                </file>
+                <file name="debugger.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_debugger"/>
+                </file>
+                <file name="qmake.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_qmake"/>
+                </file>
+                <file name="cmake.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_cmake"/>
+                </file>
+            </folder>
+        </folder>
+    </folder>
+</filesystem>

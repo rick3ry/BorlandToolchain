@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolchaindefinition xmlns="https://netbeans.org/ns/cnd-toolchain-definition/1">
+    <toolchain name="Borland_Pharlap" display="Borland" family="GNU" qmakespec="${os}-g++"/>
+    <platforms stringvalue="windows"/>
+    <makefile_writer class="org.netbeans.modules.cnd.makeproject.api.configurations.DefaultMakefileWriter"/>
+    <base_folders>
+        <base_folder path_patern=".*\\(bc45|tnt)\\bin\\?$" suffix="bin"/>
+    </base_folders>
+    <command_folders>
+        <command_folder path_patern=".*\\(bc45|tnt)\\bin\\?$" suffix="bin"/>
+    </command_folders>
+    <default_locations>
+        <platform directory="C:\BC45\bin" os="windows"/>
+        <platform directory="C:\TNT\bin" os="windows"/>
+        <platform directory="C:\MinGW\bin" os="windows"/>
+    </default_locations>
+</toolchaindefinition>

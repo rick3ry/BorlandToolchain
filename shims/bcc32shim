@@ -1,0 +1,6 @@
+#! /bin/sh
+# Things called as part of mingw expect unix-ish scripting commands
+# Launch CMD instead - per SO: a '/c' will be xlated to something so it needs to be escaped as '//c'
+# The slashes and backslashes convert the netbeans unix '/' in pathnames into '\' for legacy Dos/Windows programs.  This will mess up switches using '/' instead of '-'.
+CMD //C bcc32shim.cmd ${*//\//\\}
+
