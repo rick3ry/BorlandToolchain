@@ -1,0 +1,38 @@
+It is assumed that Borland 4.5 is installed to c:\bc45
+and that pharlap is installed to c:\tnt
+
+Copy the files in shims to c:\bc45\bin.  They are scripts and are intended to
+be as readable as scripts get; your mileage may vary.
+
+For now the only way to use this toolchain is in development / debug mode.
+Shadow copies of the toolchains are enabled as described here:
+    https://netbeans.apache.org/kb/docs/cnd/toolchain.html
+
+Copy this toolchain project into NetBeans, Clean and Build, then run.
+  (Note: I have found it important to ...
+      Clean and Build, not just Build, for this project)
+
+After you Run the project, a fresh (second) copy of NetBeans will start.  This
+fresh copy will be as though you had just installed.  You may need to turn the
+NetBeans 8.2 Plugin Portal support on and install C/C++.
+
+You should not need to install this toolchain when run this way.  It should
+show up automatically when you look under C/C++ in Tools->Options.  Only if you
+have played with the scripts might you need to press "Restore Defaults" to get
+this toolchain to appear.
+
+When using this toolchain for a project:
+The build directory expects a BCC32.CFG file with configuration information for
+the Borland compiler (just the standard file the Borland compiler expects; the
+install directory has examples of them).  It also expects a pharlap.lnk options
+file for the 386Link Pharlap linker.
+Examples of pharlap.lnk and BCC32.CFG are included.
+
+The build will attempt to run 'rebindb' to integrate the pharlap extender into
+the extended DOS executable.
+
+When used in a separate project, the toolchain will compile and assemble any C,
+C++, or ASM modules then link them with the pharlap linker.
+After the link, the resultant pharlap executable is combined with the pharlap
+libraries and primitive NT-like operating system to form an extended DOS program.
+

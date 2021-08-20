@@ -1,0 +1,39 @@
+!
+! 386|LINK command file to link a program DosStyle which has
+! been compiled by the 32-bit Borland C++ compiler.
+!
+
+-MAXREAL 999999
+-CALLBUFS 5
+
+-offset 1000H
+-stack 8000H
+-exeformat portexe
+-subsystem dosstyle
+-markphar
+-defstubname gotnt
+-twocase
+
+-startobj c0x32.obj
+
+-lib cw32.lib
+-lib import32.lib
+-lib dos32.lib
+-lib dosx32.lib
+-lib errno.lib
+
+-order class CODE,DATA,TLSCBA,INITDATA,EXITDATA,CONST,BSS
+-empty class BSS
+
+-notfc
+
+-define ___StackBase=0
+-define __Exception_list=0
+
+-export __GetExceptDLLinfo
+
+-rename public _inportb _inp
+-rename public _inport _inpw
+-rename public _outportb _outp
+-rename public _outport _outpw
+
