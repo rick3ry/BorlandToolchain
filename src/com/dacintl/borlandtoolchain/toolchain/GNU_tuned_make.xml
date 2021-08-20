@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolchaindefinition xmlns="https://netbeans.org/ns/cnd-toolchain-definition/1">
+    <make>
+        <tool name="gmake,make" skip="true"/>
+        <version flags="--version"/>
+        <alternative_path>
+            <path directory="$MSYS"/>
+            <path directory="$PATH"/>
+            <path directory="../msys/1.0/bin"/>
+            <path toolchain_name="*"/>
+        </alternative_path>
+        <dependency_support code="include $(wildcard $(addsuffix .d, ${OBJECTFILES}))&#10;"/>
+    </make>
+</toolchaindefinition>
+

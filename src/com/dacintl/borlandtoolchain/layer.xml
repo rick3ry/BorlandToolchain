@@ -18,6 +18,9 @@
             <file name="GNU_tuned_linker" url="toolchain/GNU_tuned_linker.xml">
                 <attr name="extends" stringvalue="GNU_linker"/>
             </file>
+            <file name="GNU_tuned_make" url="toolchain/GNU_tuned_make.xml">
+                <attr name="extends" stringvalue="GNU_make"/>
+            </file>
         </folder>
         <folder name="ToolChains">
             <folder name="GNU_tuned">
@@ -45,7 +48,7 @@
                     <attr name="originalFile" stringvalue="CND/Tool/GNU_tuned_linker"/>
                 </file>
                 <file name="make.shadow">
-                    <attr name="originalFile" stringvalue="CND/Tool/GNU_make"/>
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_tuned_make"/>
                 </file>
                 <file name="debugger.shadow">
                     <attr name="originalFile" stringvalue="CND/Tool/GNU_debugger"/>

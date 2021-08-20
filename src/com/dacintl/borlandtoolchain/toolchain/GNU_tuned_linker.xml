@@ -2,8 +2,8 @@
 <toolchaindefinition xmlns="https://netbeans.org/ns/cnd-toolchain-definition/1">
     <linker>
         <library_prefix stringvalue=""/>
-        <library_search flags="-LIB "/>
-        <dynamic_library_search flags="-LIB "/>
+        <library_search flags="-LIBPATH "/>
+        <dynamic_library_search flags="-LIBPATH "/>
         <library_flag flags="-LIB "/>
         <PIC flags=""/>
         <static_library flags=""/>

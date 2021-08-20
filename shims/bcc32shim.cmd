@@ -5,12 +5,20 @@ rem Here we detect if a compile was intended by the -c switch.
 
 SETLOCAL
 path c:\tnt\bin;c:\bc45\bin;%path%
-SET INCLUDE=C:\TNT\INCLUDE;C:\BC45\INCLUDE;%INCLUDE%
-SET LIB=C:\TNT\LIB;C:\BC45\LIB;%LIB%
+SET INCLUDE=C:\BC45\INCLUDE;C:\TNT\INCLUDE;%INCLUDE%
+SET LIB=C:\BC45\LIB;C:\TNT\LIB
+
 IF "%1" == "-c" GOTO DoCompile
 echo on
 386Link @pharlap.lnk %*
-rebind %2 kernel32.dll user32.dll
+@echo off
+rem Rebind can only work with 8.3 filenames, so copy it somewhere short to rebind
+copy /y %2.exe shortexe.exe
+echo on
+rebindb shortexe.exe kernel32.dll user32.dll
+@echo on
+copy /y shortexe.exe %2.exe 
+erase shortexe.exe
 goto :EOF
 
 :DoCompile
