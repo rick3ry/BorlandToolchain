@@ -12,7 +12,8 @@ IF "%1" == "-c" GOTO DoCompile
 echo on
 386Link @pharlap.lnk %*
 @echo off
-rem Rebind can only work with 8.3 filenames, so copy it somewhere short to rebind
+rem Rebind can only work with 8.3 filenames,..
+rem so copy it somewhere short to rebind then copy it back
 copy /y %2.exe shortexe.exe
 echo on
 rebindb shortexe.exe kernel32.dll user32.dll
